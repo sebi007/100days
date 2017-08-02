@@ -9,3 +9,7 @@
 Heute habe ich mich mit dem Anlegen der Kundentabelle, sowie andere zugehörige Tabellen, wie zum Beispiel zugehörige Adressen.
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day2.png)
+
+## 003 Datenbankschema Rechnungen Teil 1
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day3.png)
