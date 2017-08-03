@@ -13,3 +13,9 @@ Heute habe ich mich mit dem Anlegen der Kundentabelle, sowie andere zugehörige 
 ## 003 Datenbankschema Rechnungen Teil 1
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day3.png)
+
+## 004 Datenbankschema Rechnungen Teil 2
+
+Das Datenbankschema ist vorerst fertig. Als nächstes geht es an die Erstellung der einzelnen Views.
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day4.png)
