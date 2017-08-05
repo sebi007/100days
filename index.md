@@ -23,3 +23,7 @@ Das Datenbankschema ist vorerst fertig. Als nächstes geht es an die Erstellung 
 ## 005 Design: Artikelübersicht
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day5.png)
+
+## 006 Design: Artikeldetail
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day6.png)
