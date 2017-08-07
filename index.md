@@ -32,3 +32,43 @@ Das Datenbankschema ist vorerst fertig. Als nächstes geht es an die Erstellung 
 ## 007 Umsetzung: Navigationsleiste
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day7.png)
+
+## 008 Programmierung: API
+Heute habe ich die ersten Funktionen der Schnittstelle programmiert, die mir später die Daten an das Frontend liefert.
+
+```php
+public function index()
+    {
+        $articles = Article::all();
+
+        return $this->response->collection($articles, new ArticlesTransformer(), [], function ($resource, $fractal) {
+            $fractal->parseIncludes("article_group");
+        });
+    }
+```
+
+
+```php
+class ArticlesTransformer extends TransformerAbstract
+    {
+
+        protected $availableIncludes = ["article_group"];
+
+        public function transform(Article $article)
+        {
+            return [
+                "id" => (int) $article->id,
+                "sku" => $article->sku,
+                "name" => $article->name,
+                "description" => $article->description
+            ];
+        }
+
+        public function includeArticleGroup(Article $article)
+        {
+            $articleGroup = $article->article_group;
+
+            return $this->item($articleGroup, new ArticleGroupsTransformer());
+        }
+    }
+```
