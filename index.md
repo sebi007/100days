@@ -34,7 +34,9 @@ Das Datenbankschema ist vorerst fertig. Als nächstes geht es an die Erstellung 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day7.png)
 
 ## 008 Programmierung: API
+
 Heute habe ich die ersten Funktionen der Schnittstelle programmiert, die mir später die Daten an das Frontend liefert.
+Hier ein paar Eindrücke.
 
 ```php
 public function index()
