@@ -74,3 +74,35 @@ class ArticlesTransformer extends TransformerAbstract
         }
     }
 ```
+## 009 Programmierung: API
+
+Heute habe ich mich mit der User-Authentifizierung beschäftigt. Mein Ziel ist es den User über JSON Web Tokens mit der Api kommunizieren zu lassen.
+
+```php
+        /**
+         *  API Login, on success return JWT Auth token
+         *
+         * @param \Illuminate\Http\Request $request
+         *
+         * @return \Illuminate\Http\JsonResponse
+         */
+        public function authenticate(Request $request)
+        {
+            // grab credentials from the request
+            $credentials = array("email" => $request->json("email"), "password" => $request->json("password"));
+
+
+            try {
+                // attempt to verify the credentials and create a token for the user
+                if (!$token = JWTAuth::attempt($credentials)) {
+                    return response()->json(['error' => 'invalid_credentials'], 401);
+                }
+            } catch (JWTException $e) {
+                // something went wrong whilst attempting to encode the token
+                return response()->json(['error' => 'could_not_create_token'], 500);
+            }
+
+            // all good so return the token
+            return response()->json(compact('token'));
+        }
+```
