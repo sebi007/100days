@@ -76,7 +76,7 @@ class ArticlesTransformer extends TransformerAbstract
 ```
 ## 009 Programmierung: API
 
-Heute habe ich mich mit der User-Authentifizierung beschäftigt. Mein Ziel ist es den User über JSON Web Tokens mit der Api kommunizieren zu lassen.
+Heute habe ich mich mit der User-Authentifizierung beschäftigt. Mein Ziel ist es den User über JSON Web Tokens mit der Api kommunizieren zu lassen. Nach dem Login wird für den User ein JSON Web Token erzeugt. Diesen schickt er bei jeder Anfrage an die Api mit. Diese kann dann überprüfen, ob der Token noch gültig ist und um welchen User es sich handelt.
 
 ```php
         /**
