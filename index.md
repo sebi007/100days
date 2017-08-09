@@ -106,3 +106,41 @@ Heute habe ich mich mit der User-Authentifizierung beschäftigt. Mein Ziel ist e
             return response()->json(compact('token'));
         }
 ```
+## 010 Programmierung: API
+
+Ein weiterer Teil der API.
+
+```php
+    class ArticleGroupsController extends Controller
+    {
+
+        use Helpers;
+
+        public function index()
+        {
+            $articleGroups = ArticleGroup::all();
+
+            return $this->response->collection($articleGroups, new ArticleGroupsTransformer());
+        }
+
+        public function add(ArticleGroupRequest $request)
+        {
+            if (ArticleGroup::create($request->all())) {
+                return $this->response->created();
+            }
+
+            return $this->response->errorBadRequest();
+        }
+
+        public function get($id)
+        {
+            $fruit = ArticleGroup::find($id);
+            if ($fruit) {
+                return $this->response->item($fruit, new ArticleGroupsTransformer());
+            }
+
+            return $this->response->errorNotFound();
+        }
+
+    }
+```
