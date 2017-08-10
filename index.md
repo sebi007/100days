@@ -1,38 +1,81 @@
 # ERP in 100 Tagen
 
-## 001 Datenbankschema: Artikel
+## 011 Programmierung
 
-![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day1.png)
+Die ersten API Aufrufe aus dem Programm.
 
-## 002 Datenbankschema: Kundentabelle
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day11.png)
 
-Heute habe ich mich mit dem Anlegen der Kundentabelle, sowie andere zugehörige Tabellen, wie zum Beispiel zugehörige Adressen.
+## 010 Programmierung: API
 
-![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day2.png)
+Ein weiterer Teil der API.
 
-## 003 Datenbankschema: Rechnungen Teil 1
+```php
+    class ArticleGroupsController extends Controller
+    {
 
-![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day3.png)
+        use Helpers;
 
-## 004 Datenbankschema: Rechnungen Teil 2
+        public function index()
+        {
+            $articleGroups = ArticleGroup::all();
 
-Das Datenbankschema ist vorerst fertig. Als nächstes geht es an die Erstellung der einzelnen Views.
+            return $this->response->collection($articleGroups, new ArticleGroupsTransformer());
+        }
 
-![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day4.png)
+        public function add(ArticleGroupRequest $request)
+        {
+            if (ArticleGroup::create($request->all())) {
+                return $this->response->created();
+            }
 
-## 005 Design: Artikelübersicht
+            return $this->response->errorBadRequest();
+        }
 
-![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day5.png)
+        public function get($id)
+        {
+            $fruit = ArticleGroup::find($id);
+            if ($fruit) {
+                return $this->response->item($fruit, new ArticleGroupsTransformer());
+            }
 
-## 006 Design: Artikeldetail
+            return $this->response->errorNotFound();
+        }
 
-![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day6.png)
+    }
+```
+## 009 Programmierung: API
+
+Heute habe ich mich mit der User-Authentifizierung beschäftigt. Mein Ziel ist es den User über JSON Web Tokens mit der Api kommunizieren zu lassen. Nach dem Login wird für den User ein JSON Web Token erzeugt. Diesen schickt er bei jeder Anfrage an die Api mit. Diese kann dann überprüfen, ob der Token noch gültig ist und um welchen User es sich handelt.
+
+```php
+        /**
+         *  API Login, on success return JWT Auth token
+         *
+         * @param \Illuminate\Http\Request $request
+         *
+         * @return \Illuminate\Http\JsonResponse
+         */
+        public function authenticate(Request $request)
+        {
+            // grab credentials from the request
+            $credentials = array("email" => $request->json("email"), "password" => $request->json("password"));
 
 
-## 007 Umsetzung: Navigationsleiste
+            try {
+                // attempt to verify the credentials and create a token for the user
+                if (!$token = JWTAuth::attempt($credentials)) {
+                    return response()->json(['error' => 'invalid_credentials'], 401);
+                }
+            } catch (JWTException $e) {
+                // something went wrong whilst attempting to encode the token
+                return response()->json(['error' => 'could_not_create_token'], 500);
+            }
 
-![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day7.png)
-
+            // all good so return the token
+            return response()->json(compact('token'));
+        }
+```
 ## 008 Programmierung: API
 
 Heute habe ich die ersten Funktionen der Schnittstelle programmiert, die mir später die Daten an das Frontend liefert.
@@ -74,73 +117,35 @@ class ArticlesTransformer extends TransformerAbstract
         }
     }
 ```
-## 009 Programmierung: API
 
-Heute habe ich mich mit der User-Authentifizierung beschäftigt. Mein Ziel ist es den User über JSON Web Tokens mit der Api kommunizieren zu lassen. Nach dem Login wird für den User ein JSON Web Token erzeugt. Diesen schickt er bei jeder Anfrage an die Api mit. Diese kann dann überprüfen, ob der Token noch gültig ist und um welchen User es sich handelt.
+## 007 Umsetzung: Navigationsleiste
 
-```php
-        /**
-         *  API Login, on success return JWT Auth token
-         *
-         * @param \Illuminate\Http\Request $request
-         *
-         * @return \Illuminate\Http\JsonResponse
-         */
-        public function authenticate(Request $request)
-        {
-            // grab credentials from the request
-            $credentials = array("email" => $request->json("email"), "password" => $request->json("password"));
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day7.png)
 
+## 006 Design: Artikeldetail
 
-            try {
-                // attempt to verify the credentials and create a token for the user
-                if (!$token = JWTAuth::attempt($credentials)) {
-                    return response()->json(['error' => 'invalid_credentials'], 401);
-                }
-            } catch (JWTException $e) {
-                // something went wrong whilst attempting to encode the token
-                return response()->json(['error' => 'could_not_create_token'], 500);
-            }
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day6.png)
 
-            // all good so return the token
-            return response()->json(compact('token'));
-        }
-```
-## 010 Programmierung: API
+## 005 Design: Artikelübersicht
 
-Ein weiterer Teil der API.
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day5.png)
 
-```php
-    class ArticleGroupsController extends Controller
-    {
+## 004 Datenbankschema: Rechnungen Teil 2
 
-        use Helpers;
+Das Datenbankschema ist vorerst fertig. Als nächstes geht es an die Erstellung der einzelnen Views.
 
-        public function index()
-        {
-            $articleGroups = ArticleGroup::all();
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day4.png)
 
-            return $this->response->collection($articleGroups, new ArticleGroupsTransformer());
-        }
+## 003 Datenbankschema: Rechnungen Teil 1
 
-        public function add(ArticleGroupRequest $request)
-        {
-            if (ArticleGroup::create($request->all())) {
-                return $this->response->created();
-            }
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day3.png)
 
-            return $this->response->errorBadRequest();
-        }
+## 002 Datenbankschema: Kundentabelle
 
-        public function get($id)
-        {
-            $fruit = ArticleGroup::find($id);
-            if ($fruit) {
-                return $this->response->item($fruit, new ArticleGroupsTransformer());
-            }
+Heute habe ich mich mit dem Anlegen der Kundentabelle, sowie andere zugehörige Tabellen, wie zum Beispiel zugehörige Adressen.
 
-            return $this->response->errorNotFound();
-        }
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day2.png)
 
-    }
-```
+## 001 Datenbankschema: Artikel
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day1.png)
