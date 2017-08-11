@@ -1,5 +1,11 @@
 # ERP in 100 Tagen
 
+## 012 Frontend
+
+Handyansicht der Artikelübersicht.
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day12.png)
+
 ## 011 Programmierung
 
 Die ersten API Aufrufe aus dem Programm.
