@@ -1,8 +1,10 @@
 # ERP in 100 Tagen
 
-## 012 Frontend
+## 013 Artikelübersicht - Desktop
 
-Handyansicht der Artikelübersicht.
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day13.png)
+
+## 012 Artikelübersicht - Handy
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day12_2.png)
 
