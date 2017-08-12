@@ -4,7 +4,7 @@
 
 Handyansicht der Artikelübersicht.
 
-![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day12.png)
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day19.png)
 
 ## 011 Programmierung
 
