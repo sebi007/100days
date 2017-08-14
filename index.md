@@ -1,11 +1,48 @@
 # ERP in 100 Tagen
 
+## 015 Programmierung: API
+
+```php
+class TaxRatesController extends Controller
+    {
+        
+        use Helpers;
+
+        public function index()
+        {
+            $taxRates = TaxRate::all();
+
+            return $this->response->collection($taxRates, new TaxRateTransformer());
+        }
+
+        public function add(TaxRateRequest $request)
+        {
+            if(TaxRate::create($request->all())) {
+                return $this->response->created();
+            }
+
+            return $this->response->errorBadRequest();
+        }
+
+        public function get($id)
+        {
+            $article = TaxRate::find($id);
+            if ($article) {
+                return $this->response->item($article, new TaxRateTransformer());
+            }
+
+            return $this->response->errorNotFound();
+        }
+        
+    }
+```
+
 ## 014 Programmierung: API
 
 ```php
-public function add(ArticleGroupRequest $request)
+public function add(ArticleRequest $request)
     {
-        if (ArticleGroup::create($request->all())) {
+        if(Article::create($request->all())) {
             return $this->response->created();
         }
 
@@ -14,9 +51,9 @@ public function add(ArticleGroupRequest $request)
 
 public function get($id)
     {
-        $fruit = ArticleGroup::find($id);
-        if ($fruit) {
-            return $this->response->item($fruit, new ArticleGroupsTransformer());
+        $article = Article::find($id);
+        if ($article) {
+            return $this->response->item($article, new ArticlesTransformer());
         }
 
         return $this->response->errorNotFound();
