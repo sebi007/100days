@@ -1,5 +1,28 @@
 # ERP in 100 Tagen
 
+## 014 Programmierung: API
+
+```php
+public function add(ArticleGroupRequest $request)
+    {
+        if (ArticleGroup::create($request->all())) {
+            return $this->response->created();
+        }
+
+        return $this->response->errorBadRequest();
+    }
+
+public function get($id)
+    {
+        $fruit = ArticleGroup::find($id);
+        if ($fruit) {
+            return $this->response->item($fruit, new ArticleGroupsTransformer());
+        }
+
+        return $this->response->errorNotFound();
+    }
+```
+
 ## 013 Artikelübersicht - Desktop
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day13.png)
