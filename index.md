@@ -1,5 +1,44 @@
 # ERP in 100 Tagen
 
+## 016 Programmierung: API
+
+```php
+class CustomersController extends Controller
+    {
+
+        use Helpers;
+
+        public function index()
+        {
+            $taxRates = Customer::all();
+
+            return $this->response->collection($taxRates, new CustomerTransformer());
+        }
+
+        public function add(CustomerRequest $request)
+        {
+            if(Customer::create($request->all())) {
+                if(AddressSet::create($request->all())) {
+                    return $this->response->created();
+                }
+            }
+
+            return $this->response->errorBadRequest();
+        }
+
+        public function get($id)
+        {
+            $article = Customer::find($id);
+            if ($article) {
+                return $this->response->item($article, new CustomerTransformer());
+            }
+
+            return $this->response->errorNotFound();
+        }
+
+    }
+```
+
 ## 015 Programmierung: API
 
 ```php
