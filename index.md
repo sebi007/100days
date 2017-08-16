@@ -1,5 +1,9 @@
 # ERP in 100 Tagen
 
+## 017 Artikelgruppenübersicht - Desktop
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day17.png)
+
 ## 016 Programmierung: API
 
 ```php
