@@ -1,5 +1,9 @@
 # ERP in 100 Tagen
 
+## 019 Design: Dashboard
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day19.png)
+
 ## 018 Design: Artikelgruppe anlegen
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day18.png)
