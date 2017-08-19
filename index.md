@@ -2,7 +2,7 @@
 
 ## 020 Design: Login
 
-![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day20.png)
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day20_2.png)
 
 ## 019 Design: Dashboard
 
