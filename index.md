@@ -1,5 +1,9 @@
 # ERP in 100 Tagen
 
+## 022 Datenbankschema: Logs
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day22.png)
+
 ## 021 Design: Belegauswertung
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day21.png)
