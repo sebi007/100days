@@ -1,5 +1,9 @@
 # ERP in 100 Tagen
 
+## 023 Design: Artikel Detail Preis
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day23.png)
+
 ## 022 Datenbankschema: Logs
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day22.png)
