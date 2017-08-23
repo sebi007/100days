@@ -1,5 +1,9 @@
 # ERP in 100 Tagen
 
+## 024 Design: Artikel Detail Historie
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day24.png)
+
 ## 023 Design: Artikel Detail Preis
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day23.png)
