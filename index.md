@@ -1,5 +1,9 @@
 # ERP in 100 Tagen
 
+## 025 Design: Kunden Detail
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day25.png)
+
 ## 024 Design: Artikel Detail Historie
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day24.png)
