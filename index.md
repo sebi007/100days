@@ -1,5 +1,9 @@
 # ERP in 100 Tagen
 
+## 026 Design: Kunden Detail Adresse
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day26.png)
+
 ## 025 Design: Kunden Detail
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day25.png)
