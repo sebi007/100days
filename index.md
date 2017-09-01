@@ -1,5 +1,9 @@
 # ERP in 100 Tagen
 
+## 033 Design: Einstellungen
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day33.png)
+
 ## 032 Design: Rechnung - Historie
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day32.png)
