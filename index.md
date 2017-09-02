@@ -1,5 +1,20 @@
 # ERP in 100 Tagen
 
+## 034 Programmierung: Redux Schnittstellenzugriff
+
+```php
+const articleGroupEpic = action$ =>
+    action$.ofType("FETCH_ARTICLE_GROUPS")
+        .mergeMap(action =>
+            ajax.getJSON("http://angular-erp.dev/api/article_groups")
+                .map(response => ({type: "FETCH_ARTICLE_GROUPS_FULFILLED", payload: response}))
+                .catch(error => Observable.of({
+                    type: "FETCH_ARTICLE_GROUPS_REJECTED",
+                    payload: error.xhr.response,
+                    error: true
+                })));
+```
+
 ## 033 Design: Einstellungen
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day33.png)
