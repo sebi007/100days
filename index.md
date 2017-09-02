@@ -2,7 +2,7 @@
 
 ## 034 Programmierung: Redux Schnittstellenzugriff
 
-```php
+```javascript
 const articleGroupEpic = action$ =>
     action$.ofType("FETCH_ARTICLE_GROUPS")
         .mergeMap(action =>
