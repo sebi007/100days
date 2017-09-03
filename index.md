@@ -1,6 +1,33 @@
 # ERP in 100 Tagen
 
-## 034 Programmierung: Redux Schnittstellenzugriff
+## 035 Programmierung: Redux Reducer - Artikel
+
+```javascript
+const initialState = {
+    fetching: false,
+    fetched: false,
+    articles: [],
+    error: null
+};
+
+export default function (state = initialState, action) {
+    switch (action.type) {
+        case "FETCH_ARTICLES":
+            return {...state, fetching: true};
+            break;
+        case "FETCH_ARTICLES_FULFILLED":
+            return {...state, fetching: false, fetched: true, articles: action.payload.data};
+            break;
+        case "FETCH_ARTICLES_REJECTED":
+            return {...state, fetching: false, error: action.payload};
+        default:
+            return state;
+            break;
+    }
+}
+```
+
+## 034 Programmierung: Redux Schnittstellenzugriff - Artikel
 
 ```javascript
 const articleGroupEpic = action$ =>
