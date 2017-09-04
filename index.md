@@ -1,5 +1,38 @@
 # ERP in 100 Tagen
 
+## 036 CSS Layout Grid
+
+```css
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.row:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.row .col {
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.row .col.s1 {
+    width: 8.3333333333%;
+    left: auto;
+    right: auto;
+}
+
+
 ## 035 Programmierung: Redux Reducer - Artikel
 
 ```javascript
