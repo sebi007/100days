@@ -31,7 +31,7 @@
     left: auto;
     right: auto;
 }
-
+```
 
 ## 035 Programmierung: Redux Reducer - Artikel
 
