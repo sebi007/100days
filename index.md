@@ -1,5 +1,74 @@
 # ERP in 100 Tagen
 
+## 037 CSS Layout Grid
+
+```css
+.row .col.s1 {
+    width: 8.33333%;
+}
+
+.row .col.s2 {
+    width: 16.66667%;
+}
+
+.row .col.s3 {
+    width: 25%;
+}
+
+.row .col.s4 {
+    width: 33.33333%;
+}
+
+.row .col.s5 {
+    width: 41.66667%;
+}
+
+.row .col.s6 {
+    width: 50%;
+}
+
+.row .col.s7 {
+    width: 58.33333%;
+}
+
+.row .col.s8 {
+    width: 66.66667%;
+}
+
+.row .col.s9 {
+    width: 75%;
+}
+
+.row .col.s10 {
+    width: 83.33333%;
+}
+
+.row .col.s11 {
+    width: 91.66667%;
+}
+
+.row .col.s12 {
+    width: 100%;
+}
+```
+
+```sass
+.col {
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    $i: 1;
+    @while($i <= $num-cols) {
+      &.s#{$i} {
+        width: percentage($i / $num-cols);
+      }
+      $i: $i + 1;
+    }
+  }
+```
+
 ## 036 CSS Layout Grid
 
 ```css
