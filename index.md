@@ -1,5 +1,66 @@
 # ERP in 100 Tagen
 
+## 039 CSS Layout Grid
+
+```sass
+$num-cols: 12;
+
+html {
+  font-size: 2vw;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+}
+
+.row {
+  margin-bottom: 20px;
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .col {
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    $i: 1;
+    @while($i <= $num-cols) {
+      &.s#{$i} {
+        width: percentage($i / $num-cols);
+      }
+      $i: $i + 1;
+    }
+
+    @media only screen and (min-width: 38em) {
+      $i: 1;
+      @while($i <= $num-cols) {
+        &.m#{$i} {
+          width: percentage($i / $num-cols);
+        }
+        $i: $i + 1;
+      }
+    }
+
+    @media only screen and (min-width: 60em) {
+      $i: 1;
+      @while($i <= $num-cols) {
+        &.l#{$i} {
+          width: percentage($i / $num-cols);
+        }
+        $i: $i + 1;
+      }
+    }
+  }
+}
+```
+
 ## 038 CSS Layout Grid
 
 ```sass
