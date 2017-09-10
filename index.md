@@ -1,5 +1,9 @@
 # ERP in 100 Tagen
 
+## 042 Templates: Tablet Dashboard
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day42.png)
+
 ## 041 Templates: Mobile Dashboard
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day41.png)
