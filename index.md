@@ -1,5 +1,10 @@
 # ERP in 100 Tagen
 
+## 044 Templates: Mobile Artikeldetail
+(Leider wollte mein Chrome nicht so wie ich wollte...)
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day44.png)
+
 ## 043 Templates: Desktop Dashboard
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day43.png)
