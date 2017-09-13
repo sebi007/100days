@@ -1,5 +1,9 @@
 # ERP in 100 Tagen
 
+## 044 Templates: Tablet (Quer) Artikeldetail
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day45.png)
+
 ## 044 Templates: Mobile Artikeldetail
 (Leider wollte mein Chrome nicht so wie ich wollte...)
 
