@@ -1,6 +1,10 @@
 # ERP in 100 Tagen
 
-## 044 Templates: Tablet (Quer) Artikeldetail
+## 046 Templates: Desktop Artikeldetail
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day46.png)
+
+## 045 Templates: Tablet (Quer) Artikeldetail
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day45.png)
 
