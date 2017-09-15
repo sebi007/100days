@@ -1,5 +1,9 @@
 # ERP in 100 Tagen
 
+## 047 Templates: Mobile Artikeldetail Preise
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day47.png)
+
 ## 046 Templates: Desktop Artikeldetail
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day46.png)
