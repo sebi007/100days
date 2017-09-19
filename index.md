@@ -1,5 +1,9 @@
 # ERP in 100 Tagen
 
+## 051 Templates: Tablet Artikeldetail History
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day51.png)
+
 ## 050 Templates: Mobile Artikeldetail History
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day50.png)
