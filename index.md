@@ -1,5 +1,9 @@
 # ERP in 100 Tagen
 
+## 054 Templates: Tablet Login
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day54.png)
+
 ## 053 Templates: Mobile Login
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day53.png)
