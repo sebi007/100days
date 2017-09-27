@@ -1,5 +1,9 @@
 # ERP in 100 Tagen
 
+## 059 Templates: Mobile Kunden Detail
+
+![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day59.png)
+
 ## 058 Templates: Desktop Kundenliste
 
 ![alt text](https://raw.githubusercontent.com/sebi007/100days/master/day58.png)
